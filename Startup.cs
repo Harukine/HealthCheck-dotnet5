@@ -32,7 +32,8 @@ namespace HealthCheck
                 configuration.RootPath = string.Format("{0}/dist", ClientApp);
             });
 
-            services.AddHealthChecks();
+            services.AddHealthChecks()
+                .AddCheck<ICMPHealthCheck>("ICMP");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

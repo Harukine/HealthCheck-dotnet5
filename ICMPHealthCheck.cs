@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HealthCheck
 {
-    public class ICMPHealthCheck : ICMPHealthCheck
+    public class ICMPHealthCheck : IHealthCheck
     {
         private readonly string Host = "www.does-not-exist.com";
         private readonly int HealthyRoundtripTime = 300;
